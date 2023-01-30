@@ -27,6 +27,11 @@ const routes = [
     name: 'TodoReadPage',
     component: () => import('@/views/todo/TodoReadPage.vue'),
   },
+  {
+    path: '/todo/modify/:id',
+    name: 'TodoModifyPage',
+    component: () => import('@/views/todo/TodoModifyPage.vue'),
+  },
 
 
 ]
