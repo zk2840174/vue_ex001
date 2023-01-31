@@ -1,9 +1,11 @@
 import axios from "axios";
 
 
-export const getTodoList = async () => {
+const path = 'http://localhost:8080/api/todos/'
 
-  const {data} = await axios.get(`http://localhost/todos`)
+export const getTodoList = async (page) => {
+
+  const {data} = await axios.get(path +`list?page=${page || 1}`)
 
   return data
 }
