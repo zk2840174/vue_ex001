@@ -12,12 +12,14 @@
 <script setup>
 import SampleLayout from "@/layouts/SampleLayout.vue";
 import TodoListComponent from "@/components/todo/TodoListComponent.vue";
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import {ref} from "vue";
 
 const router = useRouter()
 
-const page = ref(1)
+const route = useRoute()
+
+const page = ref(route.query.page || 1)
 
 const componentKey = ref(1)
 
